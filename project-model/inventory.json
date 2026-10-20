@@ -1,0 +1,610 @@
+{
+  "generatedFrom": "project-model/inventory.json",
+  "project": {
+    "name": "openclaw",
+    "version": "2026.6.11",
+    "engines": {
+      "node": ">=22.19.0 <23 || >=23.11.0"
+    },
+    "packageManager": "pnpm@11.2.2+sha512.36e6621fad506178936455e70247b8808ef4ec25797a9f437a93281a020484e2607f6a469a22e982987c3dbb8866e3071514ab10a4a1749e06edcd1ec118436f"
+  },
+  "entryPoints": {
+    "cliWrapper": "openclaw.mjs",
+    "cliBootstrap": "src/entry.ts",
+    "gatewayServer": "src/gateway/server.impl.ts (startGatewayServer)",
+    "inboundDispatch": "src/auto-reply/dispatch.ts (dispatchInboundMessage)",
+    "agentAttempt": "src/agents/embedded-agent-runner/run/attempt.ts (runEmbeddedAttempt)",
+    "pluginSdkWorkspace": "packages/plugin-sdk"
+  },
+  "ports": {
+    "gateway": 18789,
+    "anyclawWebView": 18923,
+    "connectProxy": 18924,
+    "controlUiStatic": 19001
+  },
+  "extensions": {
+    "channels": [
+      "clickclack",
+      "discord",
+      "feishu",
+      "googlechat",
+      "imessage",
+      "irc",
+      "line",
+      "matrix",
+      "mattermost",
+      "msteams",
+      "nextcloud-talk",
+      "nostr",
+      "qa-channel",
+      "qqbot",
+      "raft",
+      "signal",
+      "slack",
+      "sms",
+      "synology-chat",
+      "telegram",
+      "tlon",
+      "twitch",
+      "whatsapp",
+      "zalo",
+      "zalouser"
+    ],
+    "providers": [
+      "amazon-bedrock",
+      "amazon-bedrock-mantle",
+      "anthropic",
+      "anthropic-vertex",
+      "arcee",
+      "byteplus",
+      "cerebras",
+      "chutes",
+      "clawrouter",
+      "cloudflare-ai-gateway",
+      "codex",
+      "cohere",
+      "comfy",
+      "copilot-proxy",
+      "deepinfra",
+      "deepseek",
+      "fal",
+      "featherless",
+      "fireworks",
+      "github-copilot",
+      "gmi",
+      "google",
+      "groq",
+      "huggingface",
+      "kilocode",
+      "kimi-coding",
+      "litellm",
+      "lmstudio",
+      "longcat",
+      "meta",
+      "microsoft-foundry",
+      "minimax",
+      "mistral",
+      "moonshot",
+      "novita",
+      "nvidia",
+      "ollama",
+      "openai",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "qianfan",
+      "qwen",
+      "sglang",
+      "stepfun",
+      "synthetic",
+      "tencent",
+      "together",
+      "venice",
+      "vercel-ai-gateway",
+      "vllm",
+      "volcengine",
+      "vydra",
+      "xai",
+      "xiaomi",
+      "zai"
+    ],
+    "memory": [
+      "memory-core",
+      "memory-lancedb"
+    ],
+    "other": [
+      "acpx",
+      "active-memory",
+      "admin-http-rpc",
+      "alibaba",
+      "azure-speech",
+      "bonjour",
+      "brave",
+      "browser",
+      "canvas",
+      "codex-supervisor",
+      "copilot",
+      "deepgram",
+      "device-pair",
+      "diagnostics-otel",
+      "diagnostics-prometheus",
+      "diffs",
+      "diffs-language-pack",
+      "document-extract",
+      "duckduckgo",
+      "elevenlabs",
+      "exa",
+      "file-transfer",
+      "firecrawl",
+      "google-meet",
+      "gradium",
+      "inworld",
+      "llama-cpp",
+      "llm-task",
+      "lobster",
+      "logbook",
+      "memory-wiki",
+      "microsoft",
+      "migrate-claude",
+      "migrate-hermes",
+      "oc-path",
+      "open-prose",
+      "openshell",
+      "parallel",
+      "perplexity",
+      "phone-control",
+      "pixverse",
+      "policy",
+      "qa-lab",
+      "qa-matrix",
+      "runway",
+      "searxng",
+      "senseaudio",
+      "talk-voice",
+      "tavily",
+      "thread-ownership",
+      "tokenjuice",
+      "tts-local-cli",
+      "vault",
+      "voice-call",
+      "voyage",
+      "web-readability",
+      "webhooks",
+      "workboard"
+    ],
+    "noManifest": [
+      "image-generation-core",
+      "media-understanding-core",
+      "test-support",
+      "video-generation-core"
+    ]
+  },
+  "packages": [
+    {
+      "dir": "packages/acp-core",
+      "name": "@openclaw/acp-core",
+      "description": ""
+    },
+    {
+      "dir": "packages/agent-core",
+      "name": "@openclaw/agent-core",
+      "description": ""
+    },
+    {
+      "dir": "packages/ai",
+      "name": "@openclaw/ai",
+      "description": "Reusable model provider adapters and streaming runtime from OpenClaw"
+    },
+    {
+      "dir": "packages/gateway-client",
+      "name": "@openclaw/gateway-client",
+      "description": ""
+    },
+    {
+      "dir": "packages/gateway-protocol",
+      "name": "@openclaw/gateway-protocol",
+      "description": ""
+    },
+    {
+      "dir": "packages/llm-core",
+      "name": "@openclaw/llm-core",
+      "description": ""
+    },
+    {
+      "dir": "packages/markdown-core",
+      "name": "@openclaw/markdown-core",
+      "description": ""
+    },
+    {
+      "dir": "packages/media-core",
+      "name": "@openclaw/media-core",
+      "description": ""
+    },
+    {
+      "dir": "packages/media-generation-core",
+      "name": "@openclaw/media-generation-core",
+      "description": ""
+    },
+    {
+      "dir": "packages/media-understanding-common",
+      "name": "@openclaw/media-understanding-common",
+      "description": ""
+    },
+    {
+      "dir": "packages/memory-host-sdk",
+      "name": "@openclaw/memory-host-sdk",
+      "description": ""
+    },
+    {
+      "dir": "packages/model-catalog-core",
+      "name": "@openclaw/model-catalog-core",
+      "description": ""
+    },
+    {
+      "dir": "packages/net-policy",
+      "name": "@openclaw/net-policy",
+      "description": ""
+    },
+    {
+      "dir": "packages/normalization-core",
+      "name": "@openclaw/normalization-core",
+      "description": ""
+    },
+    {
+      "dir": "packages/plugin-package-contract",
+      "name": "@openclaw/plugin-package-contract",
+      "description": ""
+    },
+    {
+      "dir": "packages/plugin-sdk",
+      "name": "@openclaw/plugin-sdk",
+      "description": ""
+    },
+    {
+      "dir": "packages/sdk",
+      "name": "@openclaw/sdk",
+      "description": ""
+    },
+    {
+      "dir": "packages/speech-core",
+      "name": "@openclaw/speech-core",
+      "description": "OpenClaw speech runtime package"
+    },
+    {
+      "dir": "packages/terminal-core",
+      "name": "@openclaw/terminal-core",
+      "description": ""
+    },
+    {
+      "dir": "packages/tool-call-repair",
+      "name": "@openclaw/tool-call-repair",
+      "description": ""
+    },
+    {
+      "dir": "packages/web-content-core",
+      "name": "@openclaw/web-content-core",
+      "description": ""
+    }
+  ],
+  "coreModules": [
+    {
+      "dir": "src/agents",
+      "sourceFiles": 1004
+    },
+    {
+      "dir": "src/plugin-sdk",
+      "sourceFiles": 466
+    },
+    {
+      "dir": "src/infra",
+      "sourceFiles": 438
+    },
+    {
+      "dir": "src/gateway",
+      "sourceFiles": 425
+    },
+    {
+      "dir": "src/commands",
+      "sourceFiles": 397
+    },
+    {
+      "dir": "src/plugins",
+      "sourceFiles": 368
+    },
+    {
+      "dir": "src/auto-reply",
+      "sourceFiles": 348
+    },
+    {
+      "dir": "src/cli",
+      "sourceFiles": 278
+    },
+    {
+      "dir": "src/config",
+      "sourceFiles": 242
+    },
+    {
+      "dir": "src/channels",
+      "sourceFiles": 224
+    },
+    {
+      "dir": "src/cron",
+      "sourceFiles": 112
+    },
+    {
+      "dir": "src/shared",
+      "sourceFiles": 77
+    },
+    {
+      "dir": "src/skills",
+      "sourceFiles": 71
+    },
+    {
+      "dir": "src/secrets",
+      "sourceFiles": 70
+    },
+    {
+      "dir": "src/acp",
+      "sourceFiles": 56
+    },
+    {
+      "dir": "src/test-utils",
+      "sourceFiles": 46
+    },
+    {
+      "dir": "src/tasks",
+      "sourceFiles": 45
+    },
+    {
+      "dir": "src/daemon",
+      "sourceFiles": 44
+    },
+    {
+      "dir": "src/logging",
+      "sourceFiles": 42
+    },
+    {
+      "dir": "src/tui",
+      "sourceFiles": 40
+    },
+    {
+      "dir": "src/media-understanding",
+      "sourceFiles": 39
+    },
+    {
+      "dir": "src/security",
+      "sourceFiles": 39
+    },
+    {
+      "dir": "src/hooks",
+      "sourceFiles": 34
+    },
+    {
+      "dir": "src/media",
+      "sourceFiles": 34
+    },
+    {
+      "dir": "src/utils",
+      "sourceFiles": 31
+    },
+    {
+      "dir": "src/llm",
+      "sourceFiles": 26
+    },
+    {
+      "dir": "src/flows",
+      "sourceFiles": 24
+    },
+    {
+      "dir": "src/talk",
+      "sourceFiles": 24
+    },
+    {
+      "dir": "src/wizard",
+      "sourceFiles": 23
+    },
+    {
+      "dir": "src/crestodian",
+      "sourceFiles": 20
+    },
+    {
+      "dir": "src/process",
+      "sourceFiles": 20
+    },
+    {
+      "dir": "src/sessions",
+      "sourceFiles": 17
+    },
+    {
+      "dir": "src/tts",
+      "sourceFiles": 14
+    },
+    {
+      "dir": "src/status",
+      "sourceFiles": 11
+    },
+    {
+      "dir": "src/video-generation",
+      "sourceFiles": 11
+    },
+    {
+      "dir": "src/image-generation",
+      "sourceFiles": 10
+    },
+    {
+      "dir": "src/memory-host-sdk",
+      "sourceFiles": 10
+    },
+    {
+      "dir": "src/node-host",
+      "sourceFiles": 10
+    },
+    {
+      "dir": "src/routing",
+      "sourceFiles": 10
+    },
+    {
+      "dir": "src/context-engine",
+      "sourceFiles": 9
+    },
+    {
+      "dir": "src/mcp",
+      "sourceFiles": 9
+    },
+    {
+      "dir": "src/model-catalog",
+      "sourceFiles": 9
+    },
+    {
+      "dir": "src/music-generation",
+      "sourceFiles": 9
+    },
+    {
+      "dir": "src/state",
+      "sourceFiles": 9
+    },
+    {
+      "dir": "src/types",
+      "sourceFiles": 9
+    },
+    {
+      "dir": "src/proxy-capture",
+      "sourceFiles": 8
+    },
+    {
+      "dir": "src/test-helpers",
+      "sourceFiles": 8
+    },
+    {
+      "dir": "src/tools",
+      "sourceFiles": 8
+    },
+    {
+      "dir": "src/trajectory",
+      "sourceFiles": 8
+    },
+    {
+      "dir": "src/commitments",
+      "sourceFiles": 7
+    },
+    {
+      "dir": "src/pairing",
+      "sourceFiles": 7
+    },
+    {
+      "dir": "src/audit",
+      "sourceFiles": 6
+    },
+    {
+      "dir": "src/link-understanding",
+      "sourceFiles": 6
+    },
+    {
+      "dir": "src/transcripts",
+      "sourceFiles": 6
+    },
+    {
+      "dir": "src/plugin-state",
+      "sourceFiles": 5
+    },
+    {
+      "dir": "src/realtime-transcription",
+      "sourceFiles": 3
+    },
+    {
+      "dir": "src/bootstrap",
+      "sourceFiles": 2
+    },
+    {
+      "dir": "src/chat",
+      "sourceFiles": 2
+    },
+    {
+      "dir": "src/media-generation",
+      "sourceFiles": 2
+    },
+    {
+      "dir": "src/web-fetch",
+      "sourceFiles": 2
+    },
+    {
+      "dir": "src/web-search",
+      "sourceFiles": 2
+    },
+    {
+      "dir": "src/bindings",
+      "sourceFiles": 1
+    },
+    {
+      "dir": "src/compat",
+      "sourceFiles": 1
+    },
+    {
+      "dir": "src/interactive",
+      "sourceFiles": 1
+    },
+    {
+      "dir": "src/memory",
+      "sourceFiles": 1
+    },
+    {
+      "dir": "src/provider-runtime",
+      "sourceFiles": 1
+    },
+    {
+      "dir": "src/docs",
+      "sourceFiles": 0
+    },
+    {
+      "dir": "src/i18n",
+      "sourceFiles": 0
+    },
+    {
+      "dir": "src/scripts",
+      "sourceFiles": 0
+    }
+  ],
+  "subprojects": [
+    {
+      "dir": "ui",
+      "role": "Control UI (lit) for the OpenClaw gateway",
+      "present": true
+    },
+    {
+      "dir": "apps/android",
+      "role": "OpenClaw companion Android app (Gradle, Kotlin)",
+      "present": true
+    },
+    {
+      "dir": "apps/ios",
+      "role": "OpenClaw companion iOS app (Swift)",
+      "present": true
+    },
+    {
+      "dir": "apps/macos",
+      "role": "OpenClaw companion macOS app (Swift)",
+      "present": true
+    },
+    {
+      "dir": "android",
+      "role": "AnyClaw Android APK: Termux-style bootstrap that runs the stack in a WebView",
+      "present": true
+    },
+    {
+      "dir": "openclaw-android",
+      "role": "codexui: Vue SPA + Express bridge to `codex app-server` (JSON-RPC over HTTP/SSE)",
+      "present": true
+    },
+    {
+      "dir": "packages",
+      "role": "Workspace packages published as @openclaw/* libraries",
+      "present": true
+    },
+    {
+      "dir": "extensions",
+      "role": "Bundled plugins (channels, providers, tools, memory)",
+      "present": true
+    }
+  ],
+  "scripts": 490
+}
